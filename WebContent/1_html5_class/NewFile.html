@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>05_simpleForm.html</title>
+</head>
+<body>
+<!-- 웹용어 method : 데이타 전송 방식
+            
+             -get (default) :header 부분에 데이터 전송 (url에 보임)
+            
+             -post : body부분에서 데이터 전송(url에 안보임)
+                    (1) 보안데이타
+                    (2) 파일전송
+                      <input type=;radio
+                      <select>
+                      <input type='checkbox'
+                      <intput type='radio'                                  -->
+<form action="XXXXX.jsp" method='get'>
+ <fieldset>
+  <legend>회원가입</legend>
+  <ol>
+  <li>
+  <label for='name'>이름</label>
+  <input type='text' id='name' name='name'/></li>
+  <li>
+  <label for='radio'>성별</label>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">남자</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">여자</label>
+  <li>
+  <label for="job">직업</label>
+  <select name ="job" id="job">
+    <option value="programmer">프로그래머</option>
+    <option value="gamer">프로게이머</option>
+  </select>
+  <li>
+  <label for='cnlal'>취미</label>
+  <input type="checkbox" id="cnlal1" name="cnlal1" value="music">
+  <label for="cnlal1">음악</label>
+  <input type="checkbox" id="cnlal2" name="cnlal2" value="movie">
+  <label for="cnlal2">영화</label>
+  <input type="checkbox" id="cnlal3" name="cnlal3" value="game">
+  <label for="cnlal3">게임</label>
+  </li>
+  <li>
+  <label for='love'>애인</label>
+  <input type="radio" id="love" name="love" value="있다">
+  <label for="male">있다</label>
+  <input type="radio" id="unlove" name="love" value="없다">
+  <label for="female">없다</label>
+  </li>
+  <li>
+  <label for='traver' >가고싶은 나라</label>
+  <input type='text' list='countries' id='trvaer' name='country'/>
+  <datalist id='countries'>
+  <option value='아이스란드'>
+  <option value='스위스'>
+  <option value='스탄'>
+  </datalist>
+  </li>
+  <li><input type='submit' value='전송'/>
+      <input type='reset' value='취소'/></li>
+  </ol>
+ </fieldset>
+</form>
+
+
+</body>
+</html>

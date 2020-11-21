@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>복습</title>
+    <style type="text/css">
+        .menu{
+            width: 300px; height: 200px;
+            background:white;
+            cursor: pointer;
+        }
+
+
+    </style>
+    <!-- table 구조 2행 2열
+            `border=1
+            `각각의 쉘의 내용
+               -치킨,짬뽕,탕수육,콜라
+            `td에 menu 클래스명 부여
+                                   -->
+    <script type="text/javascript">
+        window.onload =function (){
+            var menu = document.querySelectorAll('.menu');
+            for(var i=0;i<menu.length;i++){
+                menu[i].onclick = function (){
+                    alert(this.getAttribute('menuname') +":"+this.getAttribute('price'));
+                }
+            }
+
+        }
+        // price,menuname 값을 변수에 담아서 결제창 만들기.
+
+
+
+    </script>
+
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td class="menu" price="21000" menuname="치킨"><img src="images/1.PNG" width="300" height="200"></td>
+        <td class="menu" price="6000" menuname="짬뽕" ><img src="images/2.PNG" width="300" height="200"></td>
+        <td class="menu" price="3000" menuname="만두"><img src="images/6.PNG" width="300" height="200"></td>
+    </tr>
+
+    <tr>
+        <td class="menu" price="22000" menuname="탕수육"><img src="images/3.PNG" width="300" height="200"></td>
+        <td class="menu" price="1500" menuname="콜라"><img src="images/5.PNG" width="300" height="200"></td>
+        <td class="menu" price="9000" menuname="수제버거"><img src="images/4.PNG" width="300" height="200"></td>
+    </tr>
+    <tr>
+        <td class="menu" price="18000" menuname="죠스찜닭"><img src="images/0.PNG" width="300" height="200"></td>
+        <td class="menu" price="11000" menuname="파전"><img src="images/7.PNG" width="300" height="200"></td>
+        <td class="menu" price="3000" menuname="좋은데이"><img src="images/8.PNG" width="300" height="200"></td>
+    </tr>
+
+
+</table>
+</body>
+</html>

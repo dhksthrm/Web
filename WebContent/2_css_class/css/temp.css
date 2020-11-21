@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+  
+   
+    /*요소(태그)로 찾기 */
+   div{color : #000;}
+   div{color : #FF7738;} /* RGB(RED,GREEN,BLUE)   */
+   div{color : #FF0;}
+   
+   /* id로 찾기 */
+   #point100{color : pink;}
+   #point100{color : purple;}
+   /* 클래스명으로 찾기 */
+   .point10{color : cyan;}
+
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Map / Set 내장 객체 </title>
+<script type="text/javascript">
+
+// 1. Map : 키와 값으로 관리하는 객체
+let m = new Map();
+m.set('java','1111');
+m.set('script','2222');
+m.set('nodejs', '2222');
+m.set('java','3333');
+function test(){
+    var txtId = document.getElementById('id').value;
+    var txtPw = document.getElementById('pass').value;
+
+
+
+    //위에 map에 저장된 아이디와 패스워드를 비교하여
+    //로그인 성공여부 메세지 출력
+
+  for(let k of m.keys()){
+        if (k==txtId){
+            if (m.get(k)==txtPw){
+                alert("성공");
+                break;
+            }
+       }
+   }
+
+}
+
+//Map 은 for...in은 안되고 for..of 사용해야 하나요??
+for(var k in m.keys()){
+    document.write(k+"<br/>");
+}
+m.set(1,'1111');
+for(var k of m.keys()){
+    document.write(k+"<br/>");
+}
+var key = {'temp':'00000'};
+m.set(key,'홍길동');
+for(var k of m.key()){
+    document.write(k+"<br/>");
+}
+document.write(key + ":" + m.get(key)+"<br/>");
+document.write(key + ":" + m.get({'temp':'00000'})+"<br/>");
+
+
+
+
+/*
+for(let key of m.keys()){
+    document.writeln(key + "<br/>");  //중복 X라서 3개 출력 java,1111 이 java,3333한테 덮혀짐
+}
+for(let key of m.values()){
+    document.writeln(key+ "<br/>");
+}
+for(let [key,value] of m.entries()){
+    document.writeln(key + ":" + value + "<br/>");
+}
+for(let [key,value] of m){
+    document.writeln(key + ":" + value + "<br/>");
+}
+*/
+
+
+
+
+
+
+/* [참고] Map과 객체 리터럴의 차이 
+ 	1) 객체 리터럴은 문자열로 프라퍼티명을 지정하지만, Map의 키는 임의의 형으로 설정한다
+ 		 객체뿐만 아니라 NaN도 키가 될 수 있다
+ 	2) Map은 size를 통해 요소의 갯수를 파악한다
+ */
+
+ 
+ 
+ 
+ 
+//-------------------------------------------------------
+// 2. Set  : 중복 값을 허용하지 않는 집합 관리 객체
+
+/*s.add('tiger');
+s.add('dog');
+s.add('lion');
+s.add('dog');
+
+
+for(var v of s){
+    document.write(v+"<br/>");
+}*/
+
+//set객체를 이용하여 로또 6개 출력
+let lotto = new Set();
+while (lotto.size<6) {
+    lotto.add(parseInt(Math.random() * 45) + 1);
+}
+for(var v of lotto){
+document.write(v+"/");
+}
+</script>
+</head>
+<body>
+<!--
+아이디 : <input type="text" id="id"><br/>
+패스워드 : <input type="password" id="pass"><br/>
+<input type="button" value="전송" onclick="test()">
+-->
+
+<!-- 서버로 전송하려면 반드시 form 안에 구현 -->
+
+
+
+
+</body>
+</html>
